@@ -1,0 +1,239 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style-type: none;
+}
+html{
+	width: 100%;
+}
+
+body{
+	width: 100%;
+	background-color: #f0f0f0;
+	border: 2px solid #ccc;
+	/*height: 500px;*/
+}
+@media screen and (min-width: 1100px){
+	body{
+		width:1024px;
+		margin:0 auto;
+		height: 500px;
+	}
+}
+@media screen and (max-width: 450px){
+	body{
+		height: 200px;
+	}
+}
+
+/* @media screen and (max-height: 450px){
+	html{
+		height: 100%;
+	}
+	body{
+		height: 100%;
+		width:100%;
+	}
+} */
+@media screen and (min-width: 450px) and (max-width: 1100px){
+	html{
+		height: 100%;
+	}
+	body{
+		height: 100%;
+	}
+}
+.show-wrapper{
+	width: 100%;
+	height: 70%;
+	background: url('../img/wrapper.png') no-repeat border-box;
+	background-size: 100% 100%;
+	background-position: 50% 50%;
+}
+.back{
+	background-color:rgba(153,241,211,0.7) !important;
+	width: 100%;
+	height: 100%;
+}
+.ctrl-wrapper{
+	background-color:#248452;
+	width: 100%;
+	height: 27%;
+	margin-top:2%;
+	padding: 2% 15%;
+}
+.user-name{
+	font-size: 1.6em;
+}
+.user-name span{
+	display: inline-block;
+	margin-left:10%;
+}
+.show-dealer, .show-me{
+	display: inline-block;
+	position: relative;
+	top:0;
+	width: 48%;
+	height: 100%;
+	padding: 1%;
+}
+.card-dealer{
+	display: inline-block;
+	position:absolute;
+	top:33%;
+	width: 20%;
+	height: 29%;
+	padding: 14.5% 10%;
+	background: url('../img/jack.jpg') no-repeat border-box;
+	background-size: 1365px 600px;
+	background-position: 0% 0%;
+	visibility: hidden;
+	border-radius: 3px;
+	border: 2px solid #040404;
+	/*background: url('../img/3.jpg') no-repeat border-box;*/
+	/*background-size: 100% 100%;*/
+	/*background-position: 50% 50%;*/
+}
+#showHit{
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top:0;/*记得改成负值 隐藏啊！！！*/
+	width: 20%;
+	height: 29%;
+	padding: 14.5% 10%;
+	background: url('../img/jack.jpg') no-repeat border-box;
+	background-size: 1365px 600px;
+	background-position: 0% 0%;
+	/* animation: hit 1s ease-out infinite; */
+	/* -webkit-animation:hit 1s ease-out infinite; */
+	z-index: 1;
+	visibility: hidden;
+}
+/* #dealerShowHit{
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top:0;记得改成负值 隐藏啊！！！
+	width: 20%;
+	height: 29%;
+	padding: 14.5% 10%;
+	background: url('../img/jack.jpg') no-repeat border-box;
+	background-size: 1365px 600px;
+	background-position: 0% 0%;
+} */
+#backHit{
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top:0;/*记得改成负值 隐藏啊！！！*/
+	width: 20%;
+	height: 29%;
+	padding: 14.5% 10%;
+	background: url('../img/back.jpg') no-repeat border-box;
+	background-size: 100% 100%;
+	background-position: 50% 50%;
+	animation: backHit 1s ease-out 1;
+	-webkit-animation:backHit 1s ease-out 1;
+}
+
+
+#fixedBack{
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top:0;
+	width: 20%;
+	height: 29%;
+	padding: 14.5% 10%;
+	background: url('../img/back.jpg') no-repeat border-box;
+	background-size: 100% 100%;
+	background-position: 50% 50%;
+	z-index: 15;
+}
+#dealerBack{
+	display: inline-block;
+	position: absolute;
+	left: 15%;
+	top:33%;
+	width: 20%;
+	height: 29%;
+	padding: 14.5% 10%;
+	background: url('../img/back.jpg') no-repeat border-box;
+	background-size: 100% 100%;
+	background-position: 50% 50%;
+	z-index: 1;
+}
+
+ul{
+	height: 100%;
+	width: 100%;
+	/*border:1px solid red;*/
+}
+
+li{
+	display: inline-block;
+	height: 55%;
+	width: 15%;
+	margin:2.8% 7%;
+	/*text-align: center;*/
+	/*padding: 2.7% 0;*/
+	font-size: 1.2em;
+	/*color: #01fefc;*/
+	background-color: #D8D5D5;
+	border-radius: 50%;
+	box-shadow: 2px 5px #888;
+	/*border:1px solid blue;*/
+	vertical-align: middle;
+}
+li:visited{
+	background-color: #D8D5D5;
+}
+li:hover{
+	background-color: #A5A3A3;
+	cursor: pointer;
+}
+li:active{
+	background-color: #D8D5D5;
+}
+li span{
+	display: inline-block;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	padding-top: 12%;	
+	/*border:1px solid yellow;*/
+}
+@media screen and (max-width: 350px){
+	body{
+		font-size: 8px;
+	}
+	li{
+		height: 70%;
+	}
+}
+
+@media screen and (min-width: 350px) and (max-width: 450px){
+	body{
+		font-size: 10px;
+	}
+	li{
+		height: 70%;
+	}
+	li span{
+		padding-top: 15%;
+	}
+}
+@media screen and (min-width: 450px) and (max-width: 1100px){
+	body{
+		font-size: 14px;
+	}
+	li{
+		height: 80%;
+	}
+	li span{
+		padding-top: 10%;
+	}
+}
