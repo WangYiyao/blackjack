@@ -1,0 +1,167 @@
+@top-space:5px;
+@padding-space:5px;
+@border-radius:3px;
+@sum-width:85px;
+
+.mixin-text-center(){
+	margin: 0 auto;
+}
+.mixin-full(){
+	width: 100%;
+	height: 100%;
+	
+}
+.mixin-card(@img){
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top:0;
+	width: 20%;
+	height: 29%;
+	padding: 14.5% 10%;
+	background: url('@{img}') no-repeat border-box;
+}
+.wrapper-curtain,.wrapper-result{
+	.mixin-full;
+	z-index: 500;
+	position: absolute;
+	top: 0;
+}
+.wrapper-result{
+	position: absolute;
+	top: 0;
+	display: none;
+}
+.show-wrapper{
+	visibility: hidden;
+	// display: none;
+	width: 100%;
+	height: 70%;
+}
+.ctrl-wrapper{
+	// display: none;
+	visibility: hidden;
+	width: 100%;
+	margin-top: 2%;
+	height: 27%;
+	padding: 2% 15%;
+}
+.show-wrapper-back{
+	.mixin-full;
+}
+.money, .bet-number, .sum-name, #result, .result-money{
+	width: 40%;
+	.mixin-text-center;
+	margin-top: @top-space * 3;
+	padding: @padding-space;
+	border-radius: @border-radius;
+	span{
+		float: right;
+	}
+}
+.sum-name + p{
+	width: 40%;
+	margin-top: @top-space * 3;
+	.mixin-text-center;
+}
+.me-sum, .dealer-sum{
+	padding: @padding-space;
+	border-radius: @border-radius;
+	float: left;
+	width: @sum-width;
+}
+.dealer-sum{
+	float: right;
+}
+.money, .sum-name{
+	margin-top: @top-space * 10;
+}
+.bet-button{
+	width: 50%;
+	.mixin-text-center;
+	dd{
+		display: inline-block;
+		vertical-align: bottom;
+		width: 20%;
+		margin:5%;
+		padding: 2.5%;
+		text-align: center;
+		border-radius: 50%;
+	}
+}
+.start{
+	height: 18.5%;
+	text-align: center;
+	margin-top: @top-space * 3;
+}
+#start, #reStart{
+	height: 100%;
+	width: 10%;
+	border-radius: 100%;
+}
+
+.ctrl-button{
+	.mixin-full;
+}
+.ctrl-button dd{
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	width: 15%;
+	margin: 2.8% 7%;
+	height: 55%;
+	border-radius: 50%;
+	padding-top: 2%;
+}
+.show-dealer, .show-me{
+	display: inline-block;
+	position: relative;
+	top:0;
+	width: 48%;
+	height: 100%;
+	padding: 1%;
+}
+.card-dealer{
+	.mixin-card(@image-jack);
+	top:33%;
+	border-radius: 3px;
+	border: 2px solid @light-gray;
+	background-size: 1365px 600px;
+	background-position: 0% 0%;
+	visibility: hidden;
+}
+#showHit{
+	.mixin-card(@image-jack);
+	background-size: 1365px 600px;
+	background-position: 0% 0%;
+	z-index: 20;
+	visibility: hidden;
+}
+#backHit{
+	.mixin-card(@image-back);
+	background-size: 100% 100%;
+	background-position: 50% 50%;
+}
+#fixedBack{
+	.mixin-card(@image-back);
+	background-size: 100% 100%;
+	background-position: 50% 50%;
+	z-index: 15;
+}
+#dealerBack{
+	.mixin-card(@image-back);
+	left: 15%;
+	top:33%;
+	background-size: 100% 100%;
+	background-position: 50% 50%;
+	z-index: 1;
+}
+.user-name{
+	padding-left: 30%;
+}
+.user-name span{
+	padding-left: 10%
+}
+.result-money span{
+	float: right;
+}

@@ -1,0 +1,28 @@
+@screen-pc-width:1024px;
+@screen-pc-height:510px;
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body{
+	position: relative;
+	width: @screen-pc-width;
+	height: @screen-pc-height;
+	.mixin-text-center;
+	margin-top: 3.5%;
+	font-size: @font-size-large;
+	// font-family: Arial, "Helvetica Neue", Helvetica;
+	font-family: @font-family-monospace;
+	// @font-size-base:10px;
+	@media screen and (max-width:@screen-pc-width){
+		// width: 100%;
+		// height: 100%;
+		.mixin-full;
+		margin-top: 0;
+	}
+	@media screen and (max-width: 450px){
+		font-size: 12px;
+	}
+}
